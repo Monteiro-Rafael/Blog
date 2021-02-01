@@ -27,6 +27,9 @@ app.get("/about", (req, res) => {
   res.render("about", { aboutContent});
 })
 
+app.get("/compose", (req, res) => {
+  res.render("compose");
+})
 
 
 
