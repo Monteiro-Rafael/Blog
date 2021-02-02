@@ -2,6 +2,9 @@
     <h1>Home</h1>
     <p><%= homeStartingContent %> </p>
     
-    
+    <% postContent.forEach(function (post) { %>
+        <p><%= post.title %>  </p> 
+        <p><%= post.content %>  </p> 
+        <% }) %> 
 
 <%- include("partials/footer") %> 

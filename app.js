@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("home", {homeStartingContent, aboutContent, contactContent});
+  res.render("home", {homeStartingContent, postContent: posts});
 })
 
 app.get("/contact", (req, res) => {
@@ -42,8 +42,7 @@ app.post("/compose", (req, res) => {
 
   posts.push(post);
   
-  console.log(post);
-  console.log(posts);
+  
   res.redirect("/");
 })
 
