@@ -31,12 +31,10 @@ app.get("/compose", (req, res) => {
   res.render("compose");
 })
 
-
-
-
-
-
-
+app.post("/compose", (req, res) => {
+  const texto = req.body.composeText;
+  console.log(texto);
+})
 
 
 app.listen(3000, function() {
